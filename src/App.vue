@@ -26,5 +26,5 @@ export default {
   display: none;
 }
 
-@import "styles/icon.css";
+@import "assets/styles/icon.css";
 </style>

@@ -90,8 +90,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../../styles/font.scss";
+<style lang="less" scoped>
+@import "../../assets/styles/font.less";
 
 .dashboard-page {
   background-color: #f0f2f5;
@@ -104,7 +104,7 @@ export default {
     .card-panel {
       height: 108px;
       cursor: pointer;
-      font-size: $font-size-s;
+      font-size: @font-size-s;
       position: relative;
       overflow: hidden;
       color: #666;
@@ -176,7 +176,7 @@ export default {
             }
           }
           .axon-icon {
-            font-size: $font-size-large;
+            font-size: @font-size-large;
           }
         }
       }
@@ -185,14 +185,14 @@ export default {
         text-align: right;
         margin: 26px 0;
         .card-panel-text {
-          font-size: $font-size-xxl;
+          font-size: @font-size-xxl;
           font-weight: 600;
           line-height: 32px;
           color: rgba(0, 0, 0, 0.45);
         }
         .card-panel-num {
           font-weight: 600;
-          font-size: $font-size-xxxl;
+          font-size: @font-size-xxxl;
         }
       }
     }

@@ -10,8 +10,8 @@
 </template>
 
 <script type="">
-import {Navbar, Sidebar, AppMain, TagsView} from './components'
-import {mapState} from 'vuex'
+import { Navbar, Sidebar, AppMain, TagsView } from './components/index'
+import { mapState } from 'vuex'
 
 export default {
   name: 'layout',
@@ -32,14 +32,12 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
-  @import "../styles/mixin.scss";
-
-  .app-wrapper {
-    position: relative;
+<style rel="stylesheet/scss" lang="less" scoped>
+.app-wrapper {
+  position: relative;
+  height: 100%;
+  .main-container {
     height: 100%;
-    .main-container {
-      height: 100%;
-    }
   }
+}
 </style>

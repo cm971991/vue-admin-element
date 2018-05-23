@@ -16,6 +16,7 @@
         <template v-for="(child, childIndex) in item.children">
           <router-link v-if="!child.children" :to="child.link" :key="index + '-' + childIndex">
             <el-menu-item :index="child.link">
+              <i class="axon-icon" v-html="item.icon"></i>
               <span v-if="item.name">{{ child.name }}</span>
             </el-menu-item>
           </router-link>
@@ -46,7 +47,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="less">
 .menu-wrapper {
   .axon-icon {
     padding-right: 10px;

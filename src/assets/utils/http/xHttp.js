@@ -2,7 +2,7 @@
  * Created by chang on 2017/8/2.
  */
 import xAxios from './xAxios'
-import config from '../../config/index'
+import config from '../../../../config/index'
 
 /**
  * 成功处理

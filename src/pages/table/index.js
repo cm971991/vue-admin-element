@@ -1,5 +1,5 @@
 import { List } from '../../api/index'
-import Base from '../../base'
+import Base from '../Base/index'
 
 export default class extends Base {
   getList () {

@@ -1,7 +1,8 @@
 <!--角色管理页面-->
 <template>
   <div class="role-page">
-    <i-table></i-table>
+    <!--<i-table></i-table>-->
+    <h1>1111</h1>
   </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .role-page {
   background-color: #fff;
 }

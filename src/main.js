@@ -7,11 +7,11 @@ import store from './vuex/store'
 import { sync } from 'vuex-router-sync'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import './styles/index.scss' // global css
+import './assets/styles/index.less' // global css
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css'// progress bar style
 import UtilsPlugin from './assets/utils'
-import HttpPlugin from './http/index'
+import HttpPlugin from './assets/utils/http/index'
 import VueParticles from 'vue-particles' // 粒子酷炫效果
 import { Tag } from '../src/model/index'
 import './mock' // mock
@@ -27,6 +27,7 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/' || to.path === '/login' || to.path === '/404' || to.path === '/401') {
     setTimeout(next, 0)
   } else {
+    setTimeout(next, 20)
     const menus = store.state.menus.sidebar
     let find = false
     find = menusRecursion(menus, to)
@@ -53,14 +54,23 @@ router.beforeEach((to, from, next) => {
   }
 })
 let menusRecursion = (menus, to) => {
-  console.log(' menus:', menus)
+  console.log('menus:', menus)
+  let result = false
   for (let i in menus) {
     if (!menus[i].children) {
       if (menus[i].link === to.path) {
-        return true
+        result = true
+        return result
       }
     } else if (menus[i].children && menus[i].children.length > 0) {
-      return menusRecursion(menus[i].children, to)
+      // return menusRecursion(menus[i].children, to)
+      result = menusRecursion(menus[i].children, to)
+      if (result) {
+        return result
+      }
+    } else {
+      result = false
+      return result
     }
   }
 }

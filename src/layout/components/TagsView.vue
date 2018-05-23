@@ -142,11 +142,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../../styles/font";
+<style lang="less" scoped>
+@import "../../assets/styles/font.less";
 
 .tag-bar {
-  $height: 26px;
+  @height: 26px;
   position: fixed;
   top: 50px;
   width: 100%;
@@ -160,13 +160,13 @@ export default {
     .tag-item {
       display: inline-block;
       border: 1px solid #d8dce5;
-      height: $height;
-      line-height: $height;
+      height: @height;
+      line-height: @height;
       padding: 0 12px;
       margin-left: 12px;
       border-radius: 2px;
       color: #495060;
-      font-size: $font-size-s;
+      font-size: @font-size-s;
       a {
         padding-right: 12px;
       }
@@ -201,11 +201,10 @@ export default {
       background-color: #fff;
       border-radius: 4px;
       .item {
-        $right-menu-item-height: 30px;
         list-style: none;
-        height: $right-menu-item-height;
+        height: 30px;
         padding: 0 20px;
-        line-height: $right-menu-item-height;
+        line-height: 30px;
         &:hover {
           background-color: #eee;
           color: #333;

@@ -1,4 +1,4 @@
-import Base from '../../base'
+import Base from '../Base/index'
 
 export default class extends Base {
   /**
@@ -17,7 +17,7 @@ export default class extends Base {
       this.vm.$message.warning('请填写登录密码！')
       return false
     }
-    if (this.vm.loginForm.phone !== '17714331167' || this.vm.loginForm.password !== '123456') {
+    if (this.vm.loginForm.phone !== '13776626715' || this.vm.loginForm.password !== '123456') {
       this.vm.$message.warning('账号或密码不匹配！')
       return false
     }

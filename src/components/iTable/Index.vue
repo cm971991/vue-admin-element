@@ -166,10 +166,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .table {
   height: 100%;
-  width: calc(#{"100% - 20px"});
+  width: calc(~"100% - 20px");
   margin: 0 auto;
   .el-pagination {
     float: right;
@@ -205,11 +205,11 @@ export default {
     }
   }
   .filter-data {
-    top: calc(#{"(100% - 100px) / 3"});
+    top: calc(~"(100% - 100px) / 3");
     background-color: rgba(0, 0, 0, 0.7);
   }
   .table-action {
-    top: calc(#{"(100% - 100px) / 2"});
+    top: calc(~"(100% - 100px) / 2");
     background-color: rgba(0, 0, 0, 0.7);
   }
   .fix-right {

@@ -1,9 +1,8 @@
-@import './mixin.scss';
+@import "variables.less";
 
 #app {
   // 主体区域
   .main-container {
-    @include scrollBar;
     min-height: 100%;
     transition: margin-left 0.28s;
     margin-left: 180px;
@@ -38,7 +37,7 @@
     .main-container {
       margin-left: 36px;
     }
-    .dmc-user-info-bg{
+    .dmc-user-info-bg {
       height: 0;
     }
   }
@@ -96,9 +95,9 @@
   .nest-menu .el-submenu > .el-submenu__title,
   .el-submenu .el-menu-item {
     min-width: 180px !important;
-    background-color: $subMenuBg !important;
+    background-color: @subMenuBg !important;
     &:hover {
-      background-color: $menuHover !important;
+      background-color: @menuHover !important;
     }
   }
   .el-menu--collapse .el-menu .el-submenu {

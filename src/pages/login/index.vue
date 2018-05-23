@@ -10,13 +10,13 @@
     <el-form :model="loginForm" class="login-form" label-position="left" size="large">
       <el-form-item>
         <el-input type="text" v-model="loginForm.phone" auto-complete="off" placeholder="注册时的手机号">
-          <span v-html="'&#xe60d;'" class="axon-icon" slot="prefix"></span>
+          <span v-html="icon.phone" class="axon-icon" slot="prefix"></span>
         </el-input>
       </el-form-item>
       <el-form-item>
         <el-input :type="passwordType" v-model="loginForm.password" size="large" auto-complete="off" placeholder="登录密码">
-          <span v-html="'&#xe61b;'" class="axon-icon" slot="prefix"></span>
-          <span v-html="passwordType === 'password' ? '&#xe60c;' : '&#xe620;'" class="axon-icon" slot="suffix"
+          <span v-html="icon.password" class="axon-icon" slot="prefix"></span>
+          <span v-html="passwordType === 'password' ? icon.encryption : icon.decryption" class="axon-icon" slot="suffix"
                 @click="showPwd()"></span>
         </el-input>
       </el-form-item>
@@ -27,15 +27,21 @@
   <!--endregion-->
 </template>
 <script>
-import BLL from './Index.js'
+import BLL from './index.js'
 import menusLisit from '../../../static/json/limit.json'
 
 export default {
   components: {},
   data () {
     return {
+      icon: {
+        phone: '&#xe60d;',
+        password: '&#xe61b;',
+        encryption: '&#xe60c;',
+        decryption: '&#xe620;'
+      },
       loginForm: {
-        phone: '17714331167',
+        phone: '13776626715',
         password: '123456'
       },
       loading: false,
@@ -60,6 +66,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  @import "./Index.scss";
+<style lang="less">
+@import "index.less";
 </style>

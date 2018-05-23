@@ -38,11 +38,18 @@
         ]
       },
       {
+        "icon": "&#xe72d;",
+        "name": "表单",
+        "link": "/form",
+        "state": 1,
+        "sort": 33
+      },
+      {
         "icon": "&#xe671;",
         "name": "上传",
         "link": "",
         "state": 1,
-        "sort": 33,
+        "sort": 34,
         "children": [
           {
             "icon": "",
@@ -131,5 +138,12 @@
         "sort": 62
       }
     ]
+  },
+  {
+    "icon": "&#xe611;",
+    "name": "测试",
+    "link": "/test",
+    "state": 1,
+    "sort": 7
   }
 ]

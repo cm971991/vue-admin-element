@@ -131,7 +131,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .menus-page {
   background-color: #fff;
   .header {

@@ -60,11 +60,11 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
+<style rel="stylesheet/scss" lang="less" scoped>
   .navbar {
     height: 50px;
     line-height: 50px;
-    border-radius: 0px !important;
+    border-radius: 0 !important;
     position: fixed;
     width: 100%;
     top: 0;

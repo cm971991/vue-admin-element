@@ -11,7 +11,7 @@
 </template>
 <script type="text/jsx">
 import iTable from '../../components/iTable/Index'
-import BLL from './Index'
+import BLL from './index'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -167,6 +167,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "./Index";
+<style lang="less">
+@import "index";
 </style>
